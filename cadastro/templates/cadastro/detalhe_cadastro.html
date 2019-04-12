@@ -1,0 +1,15 @@
+{% extends 'cadastro/base.html' %}
+
+{% block content %}
+    <div class="cadastro">
+        {% if cadastro.data_publicacao %}
+            <div class="date">
+                {{ cadastro.data_publicacao }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'edita_cadastro' pk=cadastro.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h1>{{ cadastro.nome }}</h1>
+        <p>{{ cadastro.website }}</p>
+        <p>{{ cadastro.descricao|linebreaksbr }}</p>
+    </div>
+{% endblock %}
