@@ -2,15 +2,17 @@
 
 <html>
     <head>
-        <title>Cadastros</title>
+        <title>Restaurantes</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
     </head>
     <body>
             <div class="page-header">
-                <a href="{% url 'novo_cadastro' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-                <h1><a href="/">Cadastros Restaurantes</a></h1>
+                <!-- <a href="{% url 'novo_cadastro' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a> -->
+                <h1><a href="/">Home</a></h1> 
+                <h1><a href="{% url 'novo_cadastro' %}">Cadastrar</a></h1>
+                <h1><a href="{% url 'relatorio' %}">Relatórios</a></h1>
             </div>
             <div class="content container">
                 <div class="row">

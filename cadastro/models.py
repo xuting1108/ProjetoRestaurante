@@ -11,9 +11,12 @@ class Cadastro(models.Model):
 # models.DateTimeField - este é uma data e hora.
 # models.ForeignKey - este é um link para outro modelo
     nome = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    restaurante = models.CharField(max_length=200, default=' ')
     website = models.CharField(max_length=200)
     descricao = models.TextField()
     foto = models.ImageField(upload_to='fotos_restaurantes', null=True, blank=True)
+    quantidade_pessoas = models.IntegerField(null=True, blank=True)
+    faturamento = models.FloatField(null=True, blank=True)
     data_criacao = models.DateTimeField(default=timezone.now())
     data_publicacao = models.DateTimeField(blank= True, null = True)
 

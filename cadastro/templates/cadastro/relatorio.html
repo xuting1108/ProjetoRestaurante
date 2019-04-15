@@ -1,18 +1,13 @@
 {% extends 'cadastro/base.html' %}
-
 {% block content %}
     {% for cadastro in cadastros %}
         <div class = 'post' >
             <h1><a href="{% url 'detalhe_cadastro' pk=cadastro.pk %}">{{ cadastro.restaurante }}</a></h1>
             <!-- <h1><a href="">{{ cadastro.nome }}</a></h1> -->
-            <p><a href="">{{ cadastro.website }}</a></p>
+            <p>Capacidade Máxima: {{ cadastro.quantidade_pessoas }} pessoas</p>
+            <p>Faturamento mensal: R$ {{ cadastro.faturamento | floatformat:2 }}</p>
 
-            {% if cadastro.foto %}
             
-            <img src= "{{ cadastro.foto.url }}" height="300" width="450">            
-             {% endif %}
-            <p>{{ cadastro.descricao|linebreaksbr }}</p>
-            <!-- <p>publicado em: {{ cadastro.data_publicacao }}</p> -->
         </div>
     {% endfor %}
 {% endblock %}

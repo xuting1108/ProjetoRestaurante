@@ -2,8 +2,8 @@
 
 {% block content %}
     <h1>Novo Cadastro</h1>
-    <form method="POST"  class="cadastro-form">{% csrf_token %}
+    <form method="POST"  enctype="multipart/form-data" class="cadastro-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" class="save btn btn-default">Salvar</button>
     </form>
 {% endblock %}

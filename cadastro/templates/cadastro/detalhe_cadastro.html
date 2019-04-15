@@ -8,7 +8,7 @@
             </div>
         {% endif %}
         <a class="btn btn-default" href="{% url 'edita_cadastro' pk=cadastro.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-        <h1>{{ cadastro.nome }}</h1>
+        <h1>{{ cadastro.restaurante }}</h1>
         <p>{{ cadastro.website }}</p>
         <p>{{ cadastro.descricao|linebreaksbr }}</p>
     </div>
